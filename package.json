@@ -30,6 +30,9 @@
     "gulp": "^3.9.1",
     "gulp-minify": "0.0.12",
     "gulp-modify": "^0.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.13.6",
+    "merge2": "^1.0.2",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.1"
   }

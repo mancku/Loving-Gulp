@@ -5,5 +5,5 @@ var config = require('./config');
 
 gulp.task(config.buildReleaseSequenceTask, function () {
     return runSequence(config.cleanReleaseFolderTask,
-        [config.copyJsTask, config.moveFilesTask]);
+        [config.copyJsTask, config.moveFilesTask, config.transpileTsTask]);
 });

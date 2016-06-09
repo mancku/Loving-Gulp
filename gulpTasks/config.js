@@ -9,6 +9,7 @@ module.exports = {
 
     copyJsTask: 'copyJs',
     moveFilesTask: 'moveFiles',
+    transpileTsTask: 'transpileTs',
     cleanReleaseFolderTask: 'cleanReleaseFolder',
     buildReleaseSequenceTask: 'buildReleaseSequence',
 }
