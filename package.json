@@ -1,0 +1,27 @@
+{
+  "name": "loving-gulp",
+  "version": "1.0.0",
+  "description": "A quick tutorial divided into different branches to understand gulp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrilort/Loving-Gulp.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "Example",
+    "Tutorial",
+    "Gulp",
+    "Angular",
+    "Javascript"
+  ],
+  "author": "Adria Lopez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrilort/Loving-Gulp/issues"
+  },
+  "homepage": "https://github.com/adrilort/Loving-Gulp#readme"
+}
