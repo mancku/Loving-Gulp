@@ -5,6 +5,7 @@
  * - retrieves and persists the model via the todoStorage service
  * - exposes the model to the template and provides event handlers
  */
+
 angular.module('todomvc')
 	.controller('TodoCtrl', ['$scope', '$routeParams', '$filter', 'store', function TodoCtrl($scope, $routeParams, $filter, store) {
 		'use strict';
@@ -23,9 +24,7 @@ angular.module('todomvc')
 		// Monitor the current route for changes and adjust the filter accordingly.
 		$scope.$on('$routeChangeSuccess', function () {
 			var status = $scope.status = $routeParams.status || '';
-			$scope.statusFilter = (status === 'active') ?
-				{ completed: false } : (status === 'completed') ?
-				{ completed: true } : {};
+			$scope.statusFilter = Utils.prototype.routeChangeSuccess(status);
 		});
 
 		$scope.addTodo = function () {
@@ -78,7 +77,7 @@ angular.module('todomvc')
 			}
 
 			store[todo.title ? 'put' : 'delete'](todo)
-				.then(function success() {}, function error() {
+				.then(function success() { }, function error() {
 					todo.title = $scope.originalTodo.title;
 				})
 				.finally(function () {
@@ -106,7 +105,7 @@ angular.module('todomvc')
 				todo.completed = completed;
 			}
 			store.put(todo, todos.indexOf(todo))
-				.then(function success() {}, function error() {
+				.then(function success() { }, function error() {
 					todo.completed = !todo.completed;
 				});
 		};
