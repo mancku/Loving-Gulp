@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var del = require('del');
 var minify = require('gulp-minify');
 var del = require('del');
 var modify = require('gulp-modify');
@@ -36,7 +35,4 @@ gulp.task('copyJs', ['cleanReleaseFolder'], function () {
             noSource: true
         }))
         .pipe(gulp.dest('build/Release'));
-});
-gulp.task('cleanReleaseFolder', function () {
-    return del.sync('./build/Release/**');
 });
