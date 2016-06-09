@@ -29,6 +29,7 @@
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-minify": "0.0.12",
-    "gulp-modify": "^0.1.1"
+    "gulp-modify": "^0.1.1",
+    "require-dir": "^0.3.0"
   }
 }
