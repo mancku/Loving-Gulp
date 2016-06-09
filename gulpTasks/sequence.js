@@ -1,7 +1,9 @@
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
 
-gulp.task('buildReleaseSequence', function () {
-    return runSequence('cleanReleaseFolder',
-        ['copyJs', 'moveFiles']);
+var config = require('./config');
+
+gulp.task(config.buildReleaseSequenceTask, function () {
+    return runSequence(config.cleanReleaseFolderTask,
+        [config.copyJsTask, config.moveFilesTask]);
 });

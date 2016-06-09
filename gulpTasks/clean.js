@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var del = require('del');
 
-gulp.task('cleanReleaseFolder', function () {
-    return del.sync('./build/Release/**');
+var config = require('./config');
+
+gulp.task(config.cleanReleaseFolderTask, function () {
+    return del.sync(config.cleanReleasePath);
 });
