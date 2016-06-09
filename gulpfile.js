@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var minify = require('gulp-minify');
 
 var filesToMove = [
     './src/**/*.css',
