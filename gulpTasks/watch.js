@@ -6,7 +6,7 @@ gulp.watch(config.filesToTranspile, [config.transpileSequenceTask])
 		logWatcherEvent(event);
 	});
 
-gulp.watch(config.filesToMove, [config.moveFilesTask])
+gulp.watch(config.filesToMove, [config.moveFilesSequenceTask])
 	.on('change', function (event) {
 		logWatcherEvent(event);
 	});
