@@ -11,5 +11,6 @@ module.exports = {
     moveFilesTask: 'moveFiles',
     transpileTsTask: 'transpileTs',
     cleanReleaseFolderTask: 'cleanReleaseFolder',
+    cleanTranspilingResultTask: 'cleanTranspilingResult',
     buildReleaseSequenceTask: 'buildReleaseSequence',
 }
