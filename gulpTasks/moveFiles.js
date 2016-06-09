@@ -4,21 +4,10 @@ var minify = require('gulp-minify');
 
 var config = require('./config');
 
-var jsToCopy = [
-    './src/**/*.js',
-    './js/**/*.js',
-];
-
-var filesToMove = [
-    './src/**/*.css',
-    './index.html',
-    './learn.json',
-];
-
 gulp.task(config.moveFilesTask, function () {
     // the base option sets the relative root for the set of files,
     // preserving the folder structure
-    return gulp.src(filesToMove, { base: './' })
+    return gulp.src(config.filesToMove, { base: './' })
         .pipe(modify({
             fileModifier: function (file, contents) {
                 var fileName = file.history.toString();
@@ -32,7 +21,7 @@ gulp.task(config.moveFilesTask, function () {
 });
 
 gulp.task(config.copyJsTask, function () {
-    return gulp.src(jsToCopy, { base: './' })
+    return gulp.src(config.jsToCopy, { base: './' })
         .pipe(minify({
             noSource: config.copySourceOnMinify
         }))

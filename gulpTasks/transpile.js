@@ -23,7 +23,7 @@ function getTypescriptConfig() {
 
 gulp.task(config.transpileTsTask, function () {
 
-    var tsResult = gulp.src('./js/**/*.ts')
+    var tsResult = gulp.src(config.filesToTranspile)
         .pipe(sourcemaps.init())
         .pipe(getTypescriptConfig());
 

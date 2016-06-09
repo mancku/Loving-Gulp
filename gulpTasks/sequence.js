@@ -10,3 +10,11 @@ gulp.task(config.buildReleaseSequenceTask, function () {
         config.transpileTsTask,
         [config.copyJsTask, config.moveFilesTask]);
 });
+
+gulp.task(config.transpileSequenceTask, function () {
+    return runSequence(config.cleanTranspilingResultTask, config.transpileTsTask);
+});
+
+gulp.task(config.moveFilesSequenceTask, function () {
+    return runSequence(config.cleanMovedFilesTask, config.moveFilesTask);
+});
