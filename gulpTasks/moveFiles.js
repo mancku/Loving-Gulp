@@ -13,7 +13,7 @@ var filesToMove = [
     './learn.json',
 ];
 
-gulp.task('moveFiles', ['copyJs'], function () {
+gulp.task('moveFiles', function () {
     // the base option sets the relative root for the set of files,
     // preserving the folder structure
     return gulp.src(filesToMove, { base: './' })
@@ -29,7 +29,7 @@ gulp.task('moveFiles', ['copyJs'], function () {
         .pipe(gulp.dest('build/Release'));
 });
 
-gulp.task('copyJs', ['cleanReleaseFolder'], function () {
+gulp.task('copyJs', function () {
     return gulp.src(jsToCopy, { base: './' })
         .pipe(minify({
             noSource: true

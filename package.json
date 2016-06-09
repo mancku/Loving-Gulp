@@ -30,6 +30,7 @@
     "gulp": "^3.9.1",
     "gulp-minify": "0.0.12",
     "gulp-modify": "^0.1.1",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.2.1"
   }
 }
