@@ -40,3 +40,4 @@ jspm_packages
 js/controllers/utils.js
 js/controllers/utils.d.ts
 js/maps/controllers/utils.js.map
+js/angularConfig.js
