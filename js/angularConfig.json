@@ -1,0 +1,6 @@
+{
+    "backendServer": "",
+    "backendUrl": "",
+    "loginPage": "./..",
+    "logoutPage": ".././siteminderagent/forms/logout.fcc"
+}

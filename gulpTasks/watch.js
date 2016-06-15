@@ -11,6 +11,16 @@ gulp.watch(config.filesToMove, [config.moveFilesSequenceTask])
 		logWatcherEvent(event);
 	});
 
+gulp.watch(config.angularConfigFile, [config.angularConstantsTask])
+	.on('change', function (event) {
+		logWatcherEvent(event);
+	});
+
+gulp.watch(config.notBundledJsFiles, [config.jsHintTask])
+	.on('change', function (event) {
+		logWatcherEvent(event);
+	});
+
 function logWatcherEvent(event) {
 	console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
 }

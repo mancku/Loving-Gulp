@@ -15,6 +15,7 @@ module.exports = {
         './src/**/*.js',
         './js/**/*.js',
     ],
+    notBundledJsFiles: './js/**/*.js',
     filesToMove: [
         './src/**/*.css',
         './index.html',
@@ -26,6 +27,11 @@ module.exports = {
         './build/Release/learn.json',
     ],
     filesToTranspile: './js/**/*.ts',
+
+    angularConfigFile: './js/angularConfig.json',
+    angularConstantsTask: 'convertJsonToAngConstants',
+
+    jsHintTask: 'jsHintTask',
 
     copyJsTask: 'copyJs',
     moveFilesTask: 'moveFiles',

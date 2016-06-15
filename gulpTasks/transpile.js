@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var gulpTS = require('gulp-typescript');
 var merge = require('merge2');
 var sourcemaps = require('gulp-sourcemaps');
+var gulpNgConfig = require('gulp-ng-config');
 
 var config = require('./config.js');
 
@@ -35,4 +36,10 @@ gulp.task(config.transpileTsTask, function () {
             .pipe(sourcemaps.write('maps'))
             .pipe(gulp.dest('./js'))
     ]);
+});
+
+gulp.task(config.angularConstantsTask, function () {
+    return gulp.src(config.angularConfigFile)
+        .pipe(gulpNgConfig('app.config'))
+        .pipe(gulp.dest('./js'));
 });
